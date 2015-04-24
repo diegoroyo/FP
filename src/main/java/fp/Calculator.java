@@ -24,7 +24,7 @@ public class Calculator {
 	static int[] divisors(int n) {
 		return null;
 	}
-	
+
 	/*
 	 * Toma como parámetros dos listas. La primera con los 6 números de una
 	 * apuesta de la primitiva, y la segunda con los 6 números ganadores. La
@@ -41,7 +41,7 @@ public class Calculator {
 	static String speakToMe(int n) {
 		return null;
 	}
-	
+
 	/*
 	 * este metodo devuelve cierto si el año de la fecha es bisiesto fecha
 	 * dd-MM-yyyy
@@ -51,7 +51,7 @@ public class Calculator {
 	}
 
 	/*
-	 * este metodo calgula la tangente de un angulo
+	 * este metodo devuelve cierto si la fecha es válida
 	 */
 	static boolean isValidDate(String date) {
 		return false;
