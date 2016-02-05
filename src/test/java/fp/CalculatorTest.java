@@ -1,7 +1,9 @@
 package fp;
 
+import static fp.Calculator.checkIsPalindrome;
 import static fp.Calculator.checkMyBet;
 import static fp.Calculator.divisors;
+import static fp.Calculator.fibonacci;
 import static fp.Calculator.isLeapYear;
 import static fp.Calculator.isValidDate;
 import static fp.Calculator.sin;
@@ -15,6 +17,7 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -107,6 +110,42 @@ public class CalculatorTest {
 		assertFalse(isValidDate("01-00-2000"));
 		assertFalse(isValidDate("01-01-0000"));
 		System.out.println("2P");
+	}
+
+
+	@Test
+	public void testIsPalindrome() {
+		assertNotNull(checkIsPalindrome(null));
+		assertTrue(
+checkIsPalindrome("No Mara, sometamos o matemos a Ramón."));
+		assertTrue(
+checkIsPalindrome("¿Acaso hubo búhos acá?"));
+		assertTrue(
+checkIsPalindrome("No lata, no: la totalidad arada dilato talón a talón."));
+		assertTrue(
+checkIsPalindrome("Allí, tieta Mercè, faci cafè, crema, te i til·la"));
+		assertTrue(
+checkIsPalindrome("No Mara, sometamos o matemos a Ramón."));
+		assertFalse(
+				checkIsPalindrome("Buena suerte con los Test"));
+		assertFalse(
+checkIsPalindrome("4ª ley de kepler: gazpacho y mochilo siempre van con pincho"));
+		System.out.println("2P");
+	}
+
+	@Test
+	public void testFibonacci() {
+
+		int numberOfElements = 5;
+		List<Integer> expResult = Arrays.asList(1, 1, 2, 3, 5);
+		List<Integer> result = fibonacci(numberOfElements);
+		assertEquals(expResult, result);
+
+		numberOfElements = 10;
+		expResult = Arrays.asList(1, 1, 2, 3, 5, 8, 13, 21, 34, 55);
+		result = fibonacci(numberOfElements);
+		assertEquals(expResult, result);
+		System.out.println("1P");
 	}
 
 }

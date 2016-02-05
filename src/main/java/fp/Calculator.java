@@ -56,4 +56,23 @@ public class Calculator {
 	static boolean isValidDate(String date) {
 		return false;
 	}
+
+	/*
+	 * Toma como parámetros una cadena de caracteres y devuelve cierto si la
+	 * cadena resulta ser un palíndromo
+	 */
+	public static Boolean checkIsPalindrome(String cadena) {
+		throw null;
+	}
+
+
+	/*
+	 * devuelve una lista con los n números de la serie de fibonacci.
+	 */
+	public static List<Integer> fibonacci(int n) {
+		throw null;
+	}
+
+
+	
 }
